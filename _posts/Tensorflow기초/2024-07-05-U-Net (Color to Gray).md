@@ -1,7 +1,7 @@
 ---
 title: 6. U-Net (Color to Gray)
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow]
+categories: [Tensorflow, CNN]
 tags:
   [
     Tensorflow,

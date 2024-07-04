@@ -1,7 +1,7 @@
 ---
 title: 10. Seq2Seq Encoder로 뉴스기사 토픽 예측
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow]
+categories: [Tensorflow, NLP]
 tags:
   [
     Tensorflow,
