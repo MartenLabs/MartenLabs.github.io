@@ -1,7 +1,7 @@
 ---
 title: 4. Auto Encoder (노이즈 제거)
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow]
+categories: [Tensorflow, CNN]
 tags:
   [
     Tensorflow,
