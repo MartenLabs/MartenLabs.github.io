@@ -1,7 +1,7 @@
 ---
 title: 12. CNN을 이용한 Image Localization 구현
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow, CNN]
+categories: [Tensorflow]
 tags:
   [
     Tensorflow,

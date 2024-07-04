@@ -1,7 +1,7 @@
 ---
 title: 1. Simple RNN (MNIST)
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow, RNN]
+categories: [Tensorflow]
 tags:
   [
     Tensorflow,

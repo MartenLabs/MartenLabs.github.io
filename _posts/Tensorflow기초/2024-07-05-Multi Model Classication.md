@@ -1,7 +1,7 @@
 ---
 title: 2. Multi Model Classication
 date: YYYY-MM-DD HH:MM:SS +09:00
-categories: [Tensorflow, CNN]
+categories: [Tensorflow]
 tags:
   [
     Tensorflow,
