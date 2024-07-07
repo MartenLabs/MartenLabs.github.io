@@ -82,7 +82,7 @@ $\quad w^T_i\tilde{w_k} = log(P_{ik}) = log(X_{ik}) - log(X_i)$
 
 여기에 $log(X_i)$ 을 bias term으로 대체하면,
 
-$\quad w^T_i\tilde{w_k}+b_i+\tilde{b}_k = log(X_{ik})$ 
+$$\quad w^T_i \tilde{w_k} + b_i + \tilde{b}_k = log(X_{ik})$$
 
 와 같은 대칭적인 식을 얻을 수 있다.
 
@@ -113,7 +113,7 @@ $$f(x)= \begin{cases} (x/x_{max})^\alpha & \text{if } x < x_{max} \\ \qquad 1 & 
 
 먼저 skip-gram과 ivLBL모델은 단어 $i$ 의 문맥 내에서 단어 $j$ 가 등장할 softmax 확률 $Q_{ij}$ 을 학습시킨다.
 
-$\quad {Q}_{ij} = {exp(w^T_i\tilde{w_k})\over\sum^V_{k=1}exp(w^T_i\tilde{w_k})}$
+$$\quad {Q}_{ij} = {exp(w^T_i\tilde{w_k})\over\sum^V_{k=1}exp(w^T_i\tilde{w_k})}$$
 
 이 로그 확률을 최대하기 위한 목적함수는 다음과 같다.
 
@@ -127,15 +127,15 @@ $J = -\sum^V_{i=1}\sum^V_{j=1}X_{ij}log\mathcal{Q}_{ij}$
 
 이 식은 분포 $P_i$ 와 $Q_i$ 의 차이를 나타내는 Cross Entropy $H(P_i,Q_i)$ 로 다시 표현할 수 있다.
 
-$J = -\sum^V_{i=1} X_i\sum^V_{j=1}P_{ij}log\mathcal{Q}_{ij} = \sum^V_{i=1}X_iH(P_i,\mathcal{Q}_i)$
+$$J = -\sum^V_{i=1} X_i\sum^V_{j=1}P_{ij}log\mathcal{Q}_{ij} = \sum^V_{i=1}X_iH(P_i,\mathcal{Q}_i)$$
 
 Cross entropy는 꼬리가 긴 확률분포의 경우 자주 발생하지 않는 사건에 대해 매우 큰 가중치를 부여하는 경우가 생길 수 있어 로그를 취한 $P$ 와 $Q$ 의 정규화 계수를 무시할 수 있는 최소제곱법을 사용한다.
 
-$\quad \hat{J} = \sum _{i,j}X_i(log\hat{P}_{ij}-log\hat{\mathcal{Q}}_{ij})^2 \\ \quad\qquad\ = \sum_{i,j}X_i(w^T_i\tilde{w}_j-logX_{ij})^2$
+$$\quad \hat{J} = \sum _{i,j}X_i(log\hat{P}_{ij}-log\hat{\mathcal{Q}}_{ij})^2 = \sum_{i,j}X_i(w^T_i\tilde{w}_j-logX_{ij})^2$$
 
 마지막으로 미리 정해진 가중치 값 대신 문맥 단어에 의존하지 않는 일반적인 가중치 함수를 이용하여 성능을 향상시켰다.
 
-$\quad \hat{J} = \sum_{i,j}f(X_{ij})(w^T_i\tilde{w}_j-logX_{ij})^2$
+$$\quad \hat{J} = \sum_{i,j}f(X_{ij})(w^T_i\tilde{w}_j-logX_{ij})^2$$
 
 따라서 Skip-Gram과 ivLBL의 손실함수는 GloVe의 손실함수와 같은 형태임을 확인할 수 있다.
 
