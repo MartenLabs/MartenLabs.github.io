@@ -5,7 +5,6 @@ categories: [CUDA, 기초]
 tags:
   [
 	CUDA,
-    CUDA code
   ]
 pin: true
 math: true

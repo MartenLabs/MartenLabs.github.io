@@ -5,7 +5,6 @@ categories: [CUDA, 기초]
 tags:
   [
 	CUDA,
-	Accelerating for loops
   ]
 pin: true
 math: true
