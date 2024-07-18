@@ -652,5 +652,5 @@ if __name__ == '__main__':
 ![](https://tera.dscloud.me:8080/Images/Project/DeepLearningDistributedProcessingTest/Layer3.png)
 
 
-#### 장치 4 (결과값)
+#### 유저 결과값 확인
 ![](https://tera.dscloud.me:8080/Images/Project/DeepLearningDistributedProcessingTest/UserGetResult.png)
