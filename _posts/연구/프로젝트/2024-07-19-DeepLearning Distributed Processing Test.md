@@ -1,3 +1,16 @@
+---
+title: DeepLearning Distributed Processing Test
+date: YYYY-MM-DD HH:MM:SS +09:00
+categories: [연구, 프로젝트]
+tags:
+  [
+	MCU,
+	Distributed Processing
+  ]
+pin: true
+math: true
+mermaid: true
+---
 
 
 #### 본 프로젝트는 모델을 세분화하여 여러 저사양 MCU 장치에서 딥러닝 분산처리 테스트를 진행하기 전 증명 과정 단계임.
