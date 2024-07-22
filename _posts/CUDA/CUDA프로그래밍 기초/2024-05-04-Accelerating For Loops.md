@@ -71,17 +71,17 @@ mermaid: true
 
 <br/>
 
-![]([Data/](https://tera.dscloud.me:8080/Images/)CUDA/NVIDIA_Tutorial3/5.png)
+![](https://tera.dscloud.me:8080/Images/CUDA/NVIDIA_Tutorial3/5.png)
 	Kernel blockDim.x는 블록 내의 스레드 수를 나타낸다. 이 경우는 4이다.
 
 <br/>
 
-![]([Data/](https://tera.dscloud.me:8080/Images/)CUDA/NVIDIA_Tutorial3/6.png)
+![](https://tera.dscloud.me:8080/Images/CUDA/NVIDIA_Tutorial3/6.png)
 	그리드의 모든 블록에 동일한 수의 스레드가 포함되어 있다.
 
 <br/>
 
-![]([Data/](https://tera.dscloud.me:8080/Images/)CUDA/NVIDIA_Tutorial3/7.png)
+![](https://tera.dscloud.me:8080/Images/CUDA/NVIDIA_Tutorial3/7.png)
 	커널 내부의  threadIdx.x는 블록 내 스레드의 인덱스를 설명한다. 이 경우 0이다.
 
 <br/>
