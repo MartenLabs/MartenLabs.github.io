@@ -188,104 +188,103 @@ for epoch in range(num_epochs):
 	model.train()
 	# 데이터 로더를 통해 학습 데이터의 배치를 순회
 	for batch_idx, (features, targets) in enumerate(train_loader):
-	# 입력 이미지 데이터를 [-1, 1] 범위로 정규화
-	features = (features - 0.5) * 2
-	"""
-	입력 데이터의 픽셀 값을 정규화하는 과정.
-	MNIST 데이터셋의 각 이미지는 0에서 255 사이의 픽셀값을 가지고, 
-	transform=transforms.ToTensor() 를 통해 이를 0에서 1 사이의 값으로 변환
-	이 변환은 모델 학습에 있어 입력 데이터의 스케일을 일정하게 맞추어 주기 위한 전처리 단계중 하나.
+		features = (features - 0.5) * 2
+		# 입력 이미지 데이터를 [-1, 1] 범위로 정규화
+		"""
+		입력 데이터의 픽셀 값을 정규화하는 과정.
+		MNIST 데이터셋의 각 이미지는 0에서 255 사이의 픽셀값을 가지고, 
+		transform=transforms.ToTensor() 를 통해 이를 0에서 1 사이의 값으로 변환
+		이 변환은 모델 학습에 있어 입력 데이터의 스케일을 일정하게 맞추어 주기 위한 전처리 단계중 하나.
+		그러나, 더 나아가 데이터를 [-1, 1]범위로 다시 정규화. 이는 데이터의 중심을 0으로 옮기고, 범위를 -1부터 1까지로 확장하여 
+		모델이 데이터를 더 잘 학습할 수 있도록 돕는다.
 
-	그러나, 더 나아가 데이터를 [-1, 1]범위로 다시 정규화. 이는 데이터의 중심을 0으로 옮기고, 범위를 -1부터 1까지로 확장하여 
-	모델이 데이터를 더 잘 학습할 수 있도록 돕는다.
+		1. 중심화(Centering): 데이터의 평균을 0으로 만들어, 모델이 패턴을 더 쉽게 인식할 수 있도록 한다. 중심이 0이 되면, 가중치 업데이터가 더 안정적이고 효율적으로 이뤄질 수 있다. 
 
-	1. 중심화(Centering): 데이터의 평균을 0으로 만들어, 모델이 패턴을 더 쉽게 인식할 수 있도록 한다. 중심이 0이 되면, 가중치 업데이터가 
-	더 안정적이고 효율적으로 이뤄질 수 있다. 
-	2. 스케일 조정(Scaling): 데이터의 범위를 [-1, 1]로 조정하여, 모든 특성들이 비슷한 스케일을 가지게 함으로써, 
-	학습 과정에서의 가중치 업데이트가 더 균등하게 이뤄지도록 한다.
-	"""
+		2. 스케일 조정(Scaling): 데이터의 범위를 [-1, 1]로 조정하여, 모든 특성들이 비슷한 스케일을 가지게 함으로써, 
+		학습 과정에서의 가중치 업데이트가 더 균등하게 이뤄지도록 한다.
+		"""
+		# 이미지 데이터를 적절한 크기로 변형하고, 계산에 사용될 장치로 옮김
+		features = features.view(-1, IMG_SIZE).to(device) # == tf.reshape(-1, 784) == (배치(여기서는 128, 784)
 
-	# 이미지 데이터를 적절한 크기로 변형하고, 계산에 사용될 장치로 옮김
-	features = features.view(-1, IMG_SIZE).to(device) # == tf.reshape(-1, 784) == (배치(여기서는 128, 784)
+		# 타겟 데이터(여기서는 사용되지 않음)를 계산에 사용할 장치로 옮김
+		targets = targets.to(device)
 
-	# 타겟 데이터(여기서는 사용되지 않음)를 계산에 사용할 장치로 옮김
-	targets = targets.to(device)
+		# 진짜 데이터에 대한 레이블을 나타내는 텐서를 생성 
+		# targets.size() = torch.Size([128]),  targets.size(0) = 128
 
-	# 진짜 데이터에 대한 레이블을 나타내는 텐서를 생성 
-	# targets.size() = torch.Size([128]),  targets.size(0) = 128
-	valid = torch.ones(targets.size(0)).float().to(device) 
-
-	# 가짜 데이터에 대한 레이블을 나타내는 텐서를 생성 
-	fake = torch.zeros(targets.size(0)).float().to(device)
+		valid = torch.ones(targets.size(0)).float().to(device) 
+		# 가짜 데이터에 대한 레이블을 나타내는 텐서를 생성 
+		fake = torch.zeros(targets.size(0)).float().to(device)
 
 
-	### FORWARD AND BACK PROPAGATION 
-	# -------------------------- 
-	# 생성자 학습
-	# --------------------------
+		### FORWARD AND BACK PROPAGATION 
+		# -------------------------- 
 
-	# 잠재 공간에서 무작위 노이즈를 생성 
-	z = torch.zeros((targets.size(0), LATENT_DIM)).uniform_(-1.0, 1.0).to(device)
+		# 생성자 학습
+		# --------------------------
+		# 잠재 공간에서 무작위 노이즈를 생성 
+		z = torch.zeros((targets.size(0), LATENT_DIM)).uniform_(-1.0, 1.0).to(device)
 
-	# 생성자를 사용해 노이즈로부터 이미지를 생성 
-	generated_features = model.generator_forward(z)
+		# 생성자를 사용해 노이즈로부터 이미지를 생성 
+		generated_features = model.generator_forward(z)
 
-	# 생성된 이미지를 판별자에 입력하여 진짜 이미지로 분류되게 하는 손실을 계산
-	discr_pred = model.discriminator_forward(generated_features
-	gener_loss = F.binary_cross_entropy(discr_pred, valid)
-	"""
-	진짜 데이터에 해당하는 레이블을 텐서에 생성. GAN에서 Discriminator가 진짜 데이터와 가짜 데이터를 구분하도록 학습되는데, 
-	진짜 데이터에 대한 레이블은 1로, 가짜 데이터에 대한 레이블은 0으로 설정.
+		# 생성된 이미지를 판별자에 입력하여 진짜 이미지로 분류되게 하는 손실을 계산
+		discr_pred = model.discriminator_forward(generated_features
 
-	gener_loss = F.binary_cross_entropy(discr_pred, valid) 이는 생성자의 손실을 계산하는 부분으로 생성자의 목표는 판별자를 속여 
-	가짜 데이터를 진짜 데이터로 분류하게 만드는것. 여기서 discr_pred 는 판별자가 생성된 이미지에 대해 출력한 예측값.
-	이 예측값은 생성된 이미지가 진짜일 확률을 나타낸다.
+		gener_loss = F.binary_cross_entropy(discr_pred, valid)
+		"""
+		진짜 데이터에 해당하는 레이블을 텐서에 생성. GAN에서 Discriminator가 진짜 데이터와 가짜 데이터를 구분하도록 학습되는데, 
+		진짜 데이터에 대한 레이블은 1로, 가짜 데이터에 대한 레이블은 0으로 설정.
 
-	F.binary_cross_entropy 는 이진 교차 엔트로피(BCEE) 손실 함수로, 두 확률 분포간의 차이를 측정.
-	이 경우, 하나의 분포는 Discriminator의 예측값, 다른 하나는 진짜 데이터에 해당하는 레이블(valid).
-	생성자는 판별자가 생성된 이미지를 진짜로 잘못 분류하게 만들고자 하므로, valid 텐서는 모두 1로 설정. 이는 Discriminator가 생성된 
-	이미지를 진짜로 판별할 확률을 최대화하려는 생성자의 목표를 반영
-	"""
+		gener_loss = F.binary_cross_entropy(discr_pred, valid) 이는 생성자의 손실을 계산하는 부분으로 생성자의 목표는 판별자를 속여 
+		가짜 데이터를 진짜 데이터로 분류하게 만드는것. 여기서 discr_pred 는 판별자가 생성된 이미지에 대해 출력한 예측값.
+		이 예측값은 생성된 이미지가 진짜일 확률을 나타낸다.
 
-	# 생성자의 그래디언트를 초기화하고, 역전파를 통해 그래디언트를 계산한 후, 최적화 스텝을 수행 
-	optim_gener.zero_grad()
-	gener_loss.backward()
-	optim_gener.step()
+		F.binary_cross_entropy 는 이진 교차 엔트로피(BCEE) 손실 함수로, 두 확률 분포간의 차이를 측정.
+		이 경우, 하나의 분포는 Discriminator의 예측값, 다른 하나는 진짜 데이터에 해당하는 레이블(valid).
+		생성자는 판별자가 생성된 이미지를 진짜로 잘못 분류하게 만들고자 하므로, valid 텐서는 모두 1로 설정. 이는 Discriminator가 생성된 
+		이미지를 진짜로 판별할 확률을 최대화하려는 생성자의 목표를 반영
+		"""
 
-
-
-	# -------------------------- 
-	# 판별자 학습
-	# --------------------------
-
-	# 진짜 이미지를 판별자에 입력해 손실을 계산 
-	discr_pred_real = model.discriminator_forward(features.view(-1, IMG_SIZE))
-	real_loss = F.binary_cross_entropy(discr_pred_real, valid)
-
-	# 생성된 가짜 이미지를 판별자에 입력하여 손실을 계산 
-	discr_pred_fake = model.discriminator_forward(generated_features.detach())
-	fake_loss = F.binary_cross_entropy(discr_pred_fake, fake)
-
-	# 진짜 이미지와 가짜 이미지에 대한 손실을 평균내어 최종 판별자 손실을 계산 
-	discr_loss = 0.5 * (real_loss + fake_loss) 
-
-	# 판별자의 그래디언트를 초기화하고, 역전파을 통해 그래디언트를 계산한 후, 최적화 스텝을 수행
-	optim_discr.zero_grad()
-	discr_loss.backward()
-	optim_discr.step()
-
-	# 판별자와 생성자의 손실을 기록 
-	discr_costs.append(discr_loss.item())
-	gener_costs.append(gener_loss.item())
+		# 생성자의 그래디언트를 초기화하고, 역전파를 통해 그래디언트를 계산한 후, 최적화 스텝을 수행 
+		optim_gener.zero_grad()
+		gener_loss.backward()
+		optim_gener.step()
 
 
-	### Logging
-	# 지정된 배치마다 학습 진행 상황을 출력(매 100번째 배치마다 진행 상황을 출력. 배치 사이즈와 무관)
-	# ex) batch_idx 가 0이면 배치 사이즈의 갯수 데이터가 처리중인 상태
-	if not batch_idx % 100:
-		print ('Epoch: %03d/%03d | Batch %03d/%03d | Gen/Dis Loss: %.4f/%.4f'
-				%(epoch+1, num_epochs, batch_idx,
-				len(train_loader), gener_loss, discr_loss))
+
+		# -------------------------- 
+		# 판별자 학습
+		# --------------------------
+
+		# 진짜 이미지를 판별자에 입력해 손실을 계산 
+		discr_pred_real = model.discriminator_forward(features.view(-1, IMG_SIZE))
+		real_loss = F.binary_cross_entropy(discr_pred_real, valid)
+
+		# 생성된 가짜 이미지를 판별자에 입력하여 손실을 계산 
+		discr_pred_fake = model.discriminator_forward(generated_features.detach())
+		fake_loss = F.binary_cross_entropy(discr_pred_fake, fake)
+
+		# 진짜 이미지와 가짜 이미지에 대한 손실을 평균내어 최종 판별자 손실을 계산 
+		discr_loss = 0.5 * (real_loss + fake_loss) 
+
+		# 판별자의 그래디언트를 초기화하고, 역전파을 통해 그래디언트를 계산한 후, 최적화 스텝을 수행
+		optim_discr.zero_grad()
+		discr_loss.backward()
+		optim_discr.step()
+
+		# 판별자와 생성자의 손실을 기록 
+		discr_costs.append(discr_loss.item())
+		gener_costs.append(gener_loss.item())
+
+
+		### Logging
+		# 지정된 배치마다 학습 진행 상황을 출력(매 100번째 배치마다 진행 상황을 출력. 배치 사이즈와 무관)
+		# ex) batch_idx 가 0이면 배치 사이즈의 갯수 데이터가 처리중인 상태
+		if not batch_idx % 100:
+			print ('Epoch: %03d/%03d | Batch %03d/%03d | Gen/Dis Loss: %.4f/%.4f'
+					%(epoch+1, num_epochs, batch_idx,
+			len(train_loader), gener_loss, discr_loss))
 	
 	# 에폭당 경과 시간 출력
 	print('Time elapsed: %.2f min' % ((time.time() - start_time)/60))
