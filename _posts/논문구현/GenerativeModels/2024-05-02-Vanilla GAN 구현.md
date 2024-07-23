@@ -248,7 +248,7 @@ for epoch in range(num_epochs):
 	"""
 
 	# 생성자의 그래디언트를 초기화하고, 역전파를 통해 그래디언트를 계산한 후, 최적화 스텝을 수행 
-	optim_gener_zero_grad()
+	optim_gener.zero_grad()
 	gener_loss.backward()
 	optim_gener.setp()
 
