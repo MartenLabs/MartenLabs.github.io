@@ -318,7 +318,10 @@ plt.plot(range(len(discr_costs)), discr_costs, label='discriminator loss')
 plt.legend()
 plt.show()
 ```
-![](../../Data/Models/GANs/3.VanillaGAN/1.png)
+
+
+
+![](https://tera.dscloud.me:8080/Images/Models/GANs/3.VanillaGAN/1.png)
 
 <br/>
 
@@ -335,6 +338,6 @@ fig, axes = plt.subplots(nrows=1, ncols=5, figsize=(20, 2.5))
 for i, ax in enumerate(axes):
 	axes[i].imshow(imgs[i].to(torch.device('cpu')).detach(), cmap='binary')
 ```
-![](../../Data/Models/GANs/3.VanillaGAN/2.png)
+![](https://tera.dscloud.me:8080/Images/Models/GANs/3.VanillaGAN/2.png)
 
 
