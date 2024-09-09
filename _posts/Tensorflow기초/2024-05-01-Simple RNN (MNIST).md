@@ -109,5 +109,5 @@ hist = model.fit(
 ``` python
 res = model.predict(test_noisy_images[:1])
 
-loss, acc =model.evaluate(test_noisy_images, test_labels, verbose = 1)
+loss, acc = model.evaluate(test_noisy_images, test_labels, verbose = 1)
 ```
