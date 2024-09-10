@@ -1,6 +1,6 @@
 ---
 title: 1. Learning Rate and Gradient-based Learning
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-09-10 HH:MM:SS +09:00
 categories: [DeepLearning기초]
 tags:
   [
@@ -416,3 +416,4 @@ Final parameters: w = 0.9729, b = 0.8538
 '''
 ```
 ![](https://tera.dscloud.me:8080/Images/DeepLearning기초/1_Learning_Rate_and_Gradient-based_Learning/4.png)
+
