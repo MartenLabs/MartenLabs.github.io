@@ -1,6 +1,6 @@
 ---
 title: STM32에서 열화상 센서를 통한 DeepLearning Classification 구현
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-07-05T19:32:00+09:00
 categories: [연구, 프로젝트]
 tags:
   [

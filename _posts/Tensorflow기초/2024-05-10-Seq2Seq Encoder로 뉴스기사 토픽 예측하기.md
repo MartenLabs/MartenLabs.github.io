@@ -1,6 +1,6 @@
 ---
 title: 10. Seq2Seq Encoder로 뉴스기사 토픽 예측
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-10T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [

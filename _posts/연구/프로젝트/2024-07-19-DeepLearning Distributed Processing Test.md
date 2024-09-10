@@ -1,6 +1,6 @@
 ---
 title: DeepLearning Distributed Processing Test
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-07-05T19:33:00+09:00
 categories: [연구, 프로젝트]
 tags:
   [

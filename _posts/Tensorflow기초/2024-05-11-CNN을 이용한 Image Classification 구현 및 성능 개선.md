@@ -1,6 +1,6 @@
 ---
 title: 11. CNN을 이용한 Image Classification 구현 및 성능 개선
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-11T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: 1. Learning Rate and Gradient-based Learning
-date: 2024-09-10T19:32:00-09:00
+date: 2024-09-10T19:32:00+09:00
 categories: [DeepLearning기초]
 tags:
   [

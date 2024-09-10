@@ -1,6 +1,6 @@
 ---
 title: YOLOv1 논문 리뷰
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-07-03T19:30:00+09:00
 categories: [논문 리뷰, ComputerVision]
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: Skip-gram 논문 리뷰
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-07-04T19:33:00+09:00
 categories: [논문 리뷰, NLP]
 tags:
   [

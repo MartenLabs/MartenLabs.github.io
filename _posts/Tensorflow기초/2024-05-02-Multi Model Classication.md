@@ -1,6 +1,6 @@
 ---
 title: 2. Multi Model Classication
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-02T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [

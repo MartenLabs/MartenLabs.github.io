@@ -1,6 +1,6 @@
 ---
 title: 6. Evaluation of GANs
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-06T19:30:00+09:00
 categories: [논문구현, GenerativeModels]
 tags:
   [

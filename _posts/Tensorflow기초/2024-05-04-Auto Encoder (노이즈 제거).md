@@ -1,6 +1,6 @@
 ---
 title: 4. Auto Encoder (노이즈 제거)
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-04T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [

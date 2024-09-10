@@ -1,6 +1,6 @@
 ---
 title: 2. Vanilla GAN 구현
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-02T19:30:00+09:00
 categories: [논문구현, GenerativeModels]
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: 3. Compiling and Running Accelerated CUDA Code.
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-03T19:30:00+09:00
 categories: [CUDA, 기초]
 tags:
   [

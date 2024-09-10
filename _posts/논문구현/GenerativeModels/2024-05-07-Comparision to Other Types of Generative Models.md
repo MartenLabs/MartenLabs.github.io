@@ -1,6 +1,6 @@
 ---
 title: 7. Comparision to Other Types of Generative Models
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-07T19:30:00+09:00
 categories: [논문구현, GenerativeModels]
 tags:
   [

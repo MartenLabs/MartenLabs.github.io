@@ -1,6 +1,6 @@
 ---
 title: 5. U-Net (Image Segmentation)
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-05T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [

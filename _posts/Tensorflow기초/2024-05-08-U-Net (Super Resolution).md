@@ -1,6 +1,6 @@
 ---
 title: 8. U-Net (Super Resolution)
-date: YYYY-MM-DD HH:MM:SS +09:00
+date: 2024-05-08T19:30:00+09:00
 categories: [Tensorflow]
 tags:
   [
