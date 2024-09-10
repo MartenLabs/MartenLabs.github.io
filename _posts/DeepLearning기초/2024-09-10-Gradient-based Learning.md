@@ -14,9 +14,9 @@ mermaid: true
 ---
 
 
-## 1. Gradient-based Learning
+# 1. Gradient-based Learning
 
-### 1.1 Update Notation 
+## 1.1 Update Notation 
 
 $$x := x + a$$
 
@@ -33,7 +33,7 @@ $x = 6$
 <br/>
 
 
-## Effectiveness of Gradients
+# Effectiveness of Gradients
 
 
 ![](https://tera.dscloud.me:8080/Images/DeepLearning기초/1_Learning_Rate_and_Gradient-based_Learning/1.png)
@@ -63,7 +63,7 @@ $x := -3 \cdot 9 = -27$
 <br/>
 <br/>
 
-## Learning Rate and Gradient-based Learning
+# Learning Rate and Gradient-based Learning
 
 ![](https://tera.dscloud.me:8080/Images/DeepLearning기초/1_Learning_Rate_and_Gradient-based_Learning/2.png)
 
@@ -188,7 +188,7 @@ $\hat{y} = 1.4 \cdot 2 + 0.2 = 3$
 <br/>
 <br/>
 
-## 정리
+# 정리
 
 위 $y = 2x^2$ 식에서 y값을 최소화 하기 위해 $y^\prime$ 을 구하고 $x := x - \alpha y ^\prime$ 공식을 사용하였다. 
 
