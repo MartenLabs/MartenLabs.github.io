@@ -21,7 +21,10 @@ $$x := x + a$$
 
 ex) 
 
-$x = 4 \\ x := x + 2 \;\;\;\;\;\; := \text { is update notation} \\ x = 6$
+$x = 4$  
+$x := x + 2 \;\;\;\;\;\; := \text { is update notation}$
+
+$x = 6$
 
 
 <br/>
