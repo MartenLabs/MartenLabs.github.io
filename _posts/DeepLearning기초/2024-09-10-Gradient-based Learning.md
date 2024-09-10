@@ -4,8 +4,9 @@ date: YYYY-MM-DD HH:MM:SS +09:00
 categories: [DeepLearning기초]
 tags:
   [
+    DeepLearning기초,
     BackPropagation,
-    Learning Rate,
+    Learning Rate
   ]
 pin: true
 math: true
