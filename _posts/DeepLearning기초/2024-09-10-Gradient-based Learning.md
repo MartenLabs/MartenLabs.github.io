@@ -137,7 +137,8 @@ $$x := x - \alpha \mathcal{L} ^ \prime(x)$$
    여기서 $w$는 가중치, $b$는 편향.
 
 2. 손실 함수 (평균 제곱 오차):
-   $J = \mathcal{L}(y, \hat{y}) = \frac{1}{2}(y - \hat{y})^2$
+   $J = \mathcal{L}(y, \hat{y}) = \frac{1}{2}(y - \hat{y})^2 \;\;\;\;\;$   참고: $\frac{1}{2}$를 사용함으로써 미분 시 2와 $\frac{1}{2}$가 상쇄되어 계산이 간단해진다. 
+이는 최적화 과정에 영향을 주지 않으며, 단지 수학적 편의를 위한 것이다.
 
 3. 실제 데이터 포인트: $(x, y) = (2, 4)$
 
@@ -145,19 +146,57 @@ $$x := x - \alpha \mathcal{L} ^ \prime(x)$$
 
 이제 손실을 최소화하는 과정을 단계별로 살펴보면:
 
+<br/>
+
 단계 1: 예측값 계산
 
 $\hat{y} = wx + b = 1 \cdot 2 + 0 = 2$
+
+<br/>
 
 단계 2: 손실 계산
 
 $J = \frac{1}{2}(y - \hat{y})^2 = \frac{1}{2}(4 - 2)^2 = 2$
 
+<br/>
+
 단계 3: 그래디언트 계산
 
-$\frac{\partial J}{\partial w} = -(y - \hat{y})x = -(4 - 2) \cdot 2 = -4$
+1. $w$에 대한 그래디언트 ($\frac{\partial J}{\partial w}$):
 
-$\frac{\partial J}{\partial b} = -(y - \hat{y}) = -(4 - 2) = -2$
+   단계 1: 합성 함수의 미분법(체인 룰) 적용
+   $\frac{\partial J}{\partial w} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial w}$
+
+   단계 2: $\frac{\partial J}{\partial \hat{y}}$ 계산
+   $\frac{\partial J}{\partial \hat{y}} = \frac{\partial}{\partial \hat{y}}[\frac{1}{2}(y - \hat{y})^2] = -(y - \hat{y})$
+
+   단계 3: $\frac{\partial \hat{y}}{\partial w}$ 계산
+   $\frac{\partial \hat{y}}{\partial w} = \frac{\partial}{\partial w}[wx + b] = x$
+
+   단계 4: 결과 조합
+   $\frac{\partial J}{\partial w} = -(y - \hat{y}) \cdot x$
+
+   단계 5: 주어진 값 대입 (y = 4, $\hat{y}$ = 2, x = 2)
+   $\frac{\partial J}{\partial w} = -(4 - 2) \cdot 2 = -4$
+
+2. $b$에 대한 그래디언트 ($\frac{\partial J}{\partial b}$):
+
+   단계 1: 합성 함수의 미분법(체인 룰) 적용
+   $\frac{\partial J}{\partial b} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial b}$
+
+   단계 2: $\frac{\partial J}{\partial \hat{y}}$ 계산 (위와 동일)
+   $\frac{\partial J}{\partial \hat{y}} = -(y - \hat{y})$
+
+   단계 3: $\frac{\partial \hat{y}}{\partial b}$ 계산
+   $\frac{\partial \hat{y}}{\partial b} = \frac{\partial}{\partial b}[wx + b] = 1$
+
+   단계 4: 결과 조합
+   $\frac{\partial J}{\partial b} = -(y - \hat{y}) \cdot 1 = -(y - \hat{y})$
+
+   단계 5: 주어진 값 대입 (y = 4, $\hat{y}$ = 2)
+   $\frac{\partial J}{\partial b} = -(4 - 2) = -2$
+
+<br/>
 
 단계 4: 파라미터 업데이트 (학습률 $\alpha = 0.1$ 사용)
 
@@ -385,4 +424,56 @@ Final parameters: w = 0.9729, b = 0.8538
 
 
 
+
+
+1. 모델: $\hat{y} = wx + b$
+2. 손실 함수: $J = \frac{1}{2}(y - \hat{y})^2$
+
+이제 $w$와 $b$에 대한 그래디언트를 각각 계산해 보겠습니다.
+
+1. $w$에 대한 그래디언트 ($\frac{\partial J}{\partial w}$):
+
+   단계 1: 합성 함수의 미분법(체인 룰) 적용
+   $\frac{\partial J}{\partial w} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial w}$
+
+   단계 2: $\frac{\partial J}{\partial \hat{y}}$ 계산
+   $\frac{\partial J}{\partial \hat{y}} = \frac{\partial}{\partial \hat{y}}[\frac{1}{2}(y - \hat{y})^2] = -(y - \hat{y})$
+
+   단계 3: $\frac{\partial \hat{y}}{\partial w}$ 계산
+   $\frac{\partial \hat{y}}{\partial w} = \frac{\partial}{\partial w}[wx + b] = x$
+
+   단계 4: 결과 조합
+   $\frac{\partial J}{\partial w} = -(y - \hat{y}) \cdot x$
+
+   단계 5: 주어진 값 대입 (y = 4, $\hat{y}$ = 2, x = 2)
+   $\frac{\partial J}{\partial w} = -(4 - 2) \cdot 2 = -4$
+
+2. $b$에 대한 그래디언트 ($\frac{\partial J}{\partial b}$):
+
+   단계 1: 합성 함수의 미분법(체인 룰) 적용
+   $\frac{\partial J}{\partial b} = \frac{\partial J}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial b}$
+
+   단계 2: $\frac{\partial J}{\partial \hat{y}}$ 계산 (위와 동일)
+   $\frac{\partial J}{\partial \hat{y}} = -(y - \hat{y})$
+
+   단계 3: $\frac{\partial \hat{y}}{\partial b}$ 계산
+   $\frac{\partial \hat{y}}{\partial b} = \frac{\partial}{\partial b}[wx + b] = 1$
+
+   단계 4: 결과 조합
+   $\frac{\partial J}{\partial b} = -(y - \hat{y}) \cdot 1 = -(y - \hat{y})$
+
+   단계 5: 주어진 값 대입 (y = 4, $\hat{y}$ = 2)
+   $\frac{\partial J}{\partial b} = -(4 - 2) = -2$
+
+이 계산의 핵심 포인트:
+
+1. 합성 함수의 미분법(체인 룰)을 사용합니다. 이는 $J$가 $\hat{y}$의 함수이고, $\hat{y}$가 다시 $w$와 $b$의 함수이기 때문입니다.
+
+2. $\frac{\partial J}{\partial \hat{y}} = -(y - \hat{y})$는 손실 함수를 $\hat{y}$에 대해 미분한 결과입니다. 이는 예측값이 실제값에서 얼마나 벗어났는지를 나타냅니다.
+
+3. $w$에 대한 미분에서는 $x$가 곱해집니다. 이는 입력 $x$가 클수록 $w$의 변화가 손실 함수에 미치는 영향이 크다는 것을 의미합니다.
+
+4. $b$에 대한 미분에서는 추가로 곱해지는 항이 없습니다. 이는 $b$가 모든 데이터 포인트에 대해 동일한 영향을 미친다는 것을 의미합니다.
+
+이 그래디언트들은 손실을 줄이기 위해 $w$와 $b$를 어떻게 조정해야 하는지 알려줍니다. 음수 값은 해당 파라미터를 증가시켜야 손실이 줄어든다는 것을 의미합니다.
 
