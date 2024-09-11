@@ -152,6 +152,12 @@ Chain Rule을 적용할 때 수학적으로는 중간 항들이 상쇄되는 것
 <br/>
 
 2. 초기 파라미터 (임의의 값으로 설정):
+   
+   행 : 뉴런 갯수 (다음 층의 뉴런 수)
+   
+   열 : 입력 데이터 갯수 (현재 층의 입력 특성 수)
+   
+   
    - $W_1 = \begin{bmatrix} 0.1 & 0.2\\\ 0.3 & 0.4\\\ 0.5 & 0.6 \end{bmatrix}$,　　　　　$b_1 = \begin{bmatrix} 0.1\\\ 0.2\\\ 0.3 \end{bmatrix}$
   
    - $W_2 = \begin{bmatrix} 0.7 & 0.8 & 0.9 \\\ 1.0 & 1.1 & 1.2 \end{bmatrix}$, 　　$b_2 = \begin{bmatrix} 0.4 \\\ 0.5 \end{bmatrix}$
