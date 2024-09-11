@@ -21,8 +21,6 @@ comments: true
 
 딥러닝 모델의 핵심은 학습 가능한 파라미터이다. 이 파라미터들은 Backpropagation이라는 알고리즘을 통해 최적화된다.
 
-<br/>
-<br/>
 
 | J |
 |:---:|
@@ -43,7 +41,6 @@ comments: true
 |$\uparrow$|
 |$X$|
 
-<br/>
 <br/>
 
 위 다이어그램은 전형적인 CNN(Convolutional Neural Network) 구조를 보여준다. 입력 $X$부터 최종 손실 $J$까지, 데이터가 어떻게 흐르는지 볼 수 있다.
