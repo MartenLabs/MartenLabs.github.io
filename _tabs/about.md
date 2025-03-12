@@ -11,7 +11,7 @@ order: 1
 
 또한, **Spring Boot, Flask 기반의 백엔드 개발 경험**이 있으며,  
 **공공기관 데이터 수집 자동화, API 서버 구축 및 클라우드 인프라 운영**과 같은 프로젝트를 수행하였습니다.  
-💡 **특히, YOLO 기반 객체 탐지 모델을 경량화하여 임베디드 디바이스(STM32, Raspberry Pi)에서 실시간 추론을 가능하게 한 연구를 진행했으며, SCIE급 논문과 특허를 보유하고 있습니다.**  
+**특히, YOLO 기반 객체 탐지 모델을 경량화하여 임베디드 디바이스(STM32, Raspberry Pi)에서 실시간 추론을 가능하게 한 연구를 진행했으며, SCIE급 논문과 특허를 보유하고 있습니다.**  
 
 <br/>
 
@@ -22,7 +22,7 @@ order: 1
 🏢 **근무처:** 한국인물검증 (📅 **2021.12 ~ 2022.12** / 1년)  
 👨‍💻 **역할:** 백엔드 개발  
 
-✅ **주요 업무**  
+🎯 **주요 업무**  
 
 - **대학교 졸업증명서 원본 확인 엔진 개발 (Flask 기반)**  
 
@@ -32,7 +32,7 @@ order: 1
 
 - **AWS 기반 클라우드 인프라 구축 및 운영**  
 
-✅ **기여도 & 주요 성과**  
+⭐ **기여도 & 주요 성과**  
 
 - **프로젝트 전체 아키텍처 설계 및 백엔드 개발 주도**  
 
@@ -75,9 +75,9 @@ order: 1
 
 ### **1. FLARE: 저해상도 열화상 기반 객체 탐지 경량 AI 모델**  
 📅 **연구 기간:** 2024.01.01 ~ 2024.12.31  
-🔗 **기술 스택:** Python, TensorFlow, TensorFlow Lite, OpenCV, YOLOv1, YOLOv8, MobileNetV2-SSD, CubeMX, X-CUBE-AI, Raspberry Pi, STM32  
+🚀 **기술 스택:** Python, TensorFlow, TensorFlow Lite, OpenCV, YOLOv1, YOLOv8, MobileNetV2-SSD, CubeMX, X-CUBE-AI, Raspberry Pi, STM32  
 
-✅ **연구 개요**  
+📝 **연구 개요**  
 
 - 저해상도(32×24) 열화상 카메라에서 **FLARE(Fast and Lightweight Architecture for Real-time Estimation) 모델 개발**  
 
@@ -85,7 +85,7 @@ order: 1
 
 - 저사양 MCU 및 임베디드 디바이스에서도 실시간 추론 가능하도록 설계  
 
-✅ **주요 성과**  
+⭐ **주요 성과**  
 
 - **FLARE 모델, YOLO 기반 탐지 모델 대비 메모리 사용량 1/118, 속도 12배 향상**  
 
@@ -99,15 +99,15 @@ order: 1
 
 ### **2. ObjectBlend: 데이터 불균형 해결을 위한 경량 데이터 증강 기법**  
 📅 **연구 기간:** 2024.07.11 ~ 2024.11.30  
-🔗 **기술 스택:** Python, OpenCV, PyTorch, YOLO, NVIDIA AGX Orin, TensorRT  
+🚀 **기술 스택:** Python, OpenCV, PyTorch, YOLO, NVIDIA AGX Orin, TensorRT  
 
-✅ **연구 개요**  
+📝 **연구 개요**  
 
 - 제조업 비전 검사 시스템에서 **소수 클래스(결함 데이터)의 탐지 성능 개선**  
 
 - 경량 데이터 증강 기법(ObjectBlend)을 개발하여 불균형 데이터 문제 해결  
 
-✅ **주요 성과**  
+⭐ **주요 성과**  
 
 - **YOLOv3-tiny 기준 성능 0.1988 → 0.9147 개선**  
 
@@ -150,5 +150,5 @@ order: 1
 <br/>
 
 ## **GitHub & Blog**
-📌 **GitHub:** [github](https://github.com/MartenLabs)  
-📌 **블로그:** [MartenLabs](https://martenlabs.github.io/about/)  
+🔗 **GitHub:** [github](https://github.com/MartenLabs)  
+🔗 **블로그:** [MartenLabs](https://martenlabs.github.io/about/)  
