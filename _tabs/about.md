@@ -19,7 +19,7 @@ order: 1
 
 ### **1. 개인정보 검증 시스템 (KKAYO)**
 📅 **프로젝트 진행 기간:** **2022.01 ~ 2022.11** (10개월)  
-🏢 **근무처:** 한국인물검증 (📅 **2021.12 ~ 2022.12** / 1년)  
+🏢 **근무처:** 한국인물검증 (**2021.12 ~ 2022.12** / 1년)  
 👨‍💻 **역할:** 백엔드 개발  
 
 🎯 **주요 업무**  
@@ -46,26 +46,20 @@ order: 1
 ## **2. 연구 성과 및 논문 발표**  
 
 📌 **SCIE 저널 논문 (IEEE Access, Under Review)**  
-
 - 📝 **Real-Time Object Detection Using Low-Resolution Thermal Camera** *(경량 AI 기반 실시간 객체 탐지 연구)*  
-
 - 📝 **ObjectBlend: Data Augmentation Technique for Vision Inspection Systems** *(비전 검사 시스템에서 데이터 불균형 문제 해결을 위한 증강 기법)*  
 
 <br/>
 
 📌 **특허 출원**  
-
 - **FLARE 경량화 객체 탐지 모델 및 실시간 추론 특허** (출원번호: 10-2024-0127351)  
-
 - **저해상도 열화상 이미지 데이터 증강 알고리즘 특허** (출원번호: 10-2024-0127352)  
 
 <br/>
 
 📌 **국제 컨퍼런스 발표**  
 - **IEEE ICCE 2025 논문 발표**  
-  
   - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera*  
-  
   - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems*  
 
 <br/>
