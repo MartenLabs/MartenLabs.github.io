@@ -36,33 +36,9 @@ order: 1
 - **AWS 비용 최적화 전략을 적용하여 서버 운영 비용 30% 절감**  
 
 <br/>
-<br/>
 
-## **2. 연구 성과 및 논문 발표**  
-
-📌 **SCIE 저널 논문 (IEEE Access, Under Review)**  
-- 📝 **Real-Time Object Detection Using Low-Resolution Thermal Camera** *(경량 AI 기반 실시간 객체 탐지 연구)*  
-- 📝 **ObjectBlend: Data Augmentation Technique for Vision Inspection Systems** *(비전 검사 시스템에서 데이터 불균형 문제 해결을 위한 증강 기법)*  
-
-<br/>
-
-📌 **특허 출원**  
-- **저해상도 열화상 카메라용 경량 객체 탐지 모델 및 실시간 추론 특허** (출원번호: 10-2024-0127351)  
-- **저해상도 열화상 이미지 데이터 증강 알고리즘 특허** (출원번호: 10-2024-0127352)  
-
-<br/>
-
-📌 **국제 컨퍼런스 발표**  
-- **IEEE ICCE 2025 논문 발표**  
-  - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera*  
-  - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems*  
-
-<br/>
-<br/>
-
-## **Embedded AI & 경량 딥러닝 연구 프로젝트**  
-
-### **1. FLARE: 저해상도 열화상 기반 객체 탐지 경량 AI 모델**  
+---
+### **2. FLARE: 저해상도 열화상 기반 객체 탐지 경량 AI 모델**  
 📅 **연구 기간:** 2024.01.01 ~ 2024.12.31  
 🚀 **기술 스택:** Python, TensorFlow, TensorFlow Lite, OpenCV, YOLOv1, YOLOv8, MobileNetV2-SSD, CubeMX, X-CUBE-AI, Raspberry Pi, STM32  
 
@@ -85,8 +61,7 @@ order: 1
 <br/>
 
 ---
-
-### **2. ObjectBlend: 데이터 불균형 해결을 위한 경량 데이터 증강 기법**  
+### **3. ObjectBlend: 데이터 불균형 해결을 위한 경량 데이터 증강 기법**  
 📅 **연구 기간:** 2024.07.11 ~ 2024.11.30  
 🚀 **기술 스택:** Python, OpenCV, PyTorch, YOLO, NVIDIA AGX Orin, TensorRT  
 
@@ -105,6 +80,30 @@ order: 1
 <br/>
 <br/>
 
+---
+## **성과**  
+
+📌 **SCIE 저널 논문 (IEEE Access, Under Review)**  
+- 📝 **Real-Time Object Detection Using Low-Resolution Thermal Camera** *(경량 AI 기반 실시간 객체 탐지 연구)*  
+- 📝 **ObjectBlend: Data Augmentation Technique for Vision Inspection Systems** *(비전 검사 시스템에서 데이터 불균형 문제 해결을 위한 증강 기법)*  
+
+<br/>
+
+📌 **특허 출원**  
+- **저해상도 열화상 카메라용 경량 객체 탐지 모델 및 실시간 추론 특허** (출원번호: 10-2024-0127351)  
+- **저해상도 열화상 이미지 데이터 증강 알고리즘 특허** (출원번호: 10-2024-0127352)  
+
+<br/>
+
+📌 **국제 컨퍼런스 발표**  
+- **IEEE ICCE 2025 논문 발표**  
+  - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera*  
+  - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems*  
+
+<br/>
+<br/>
+
+---
 ## **Skills & Tech Stack**
 
 ### **AI & 딥러닝 모델 최적화**
@@ -138,6 +137,7 @@ order: 1
 <br/>
 <br/>
 
+---
 ## **GitHub & Blog**
 🔗 **GitHub:** [github](https://github.com/MartenLabs)  
 🔗 **블로그:** [MartenLabs](https://martenlabs.github.io/about/)  
