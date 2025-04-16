@@ -28,7 +28,7 @@ order: 1
 
 ## 📌 **연구 및 기술 성과**
 
-### **1. FLARE: 저해상도 열화상 실시간 객체 탐지 모델** *(2024.01 ~ 2024.12)*
+### **1. FLARE: 저해상도 열화상 실시간 객체 탐지 모델** *(2024.01 ~ 2024.12 / 1년)*
 
 - **기술 스택:** Python, TensorFlow Lite, OpenCV, YOLO, MobileNetV2-SSD, CubeMX, X-CUBE-AI, Raspberry Pi, STM32
 - **주요 성과:**
@@ -36,7 +36,7 @@ order: 1
   - STM32 MCU 환경에서 **초경량 실시간 객체 탐지 구현**
   - **저해상도 열화상 이미지 전용 데이터 증강 기법 개발**로  저해상도 영상에서 객체 탐지 정확도(mAP 95%) 달성
 
-### **2. ObjectBlend: 데이터 불균형 해결 데이터 증강 기법** *(2024.07 ~ 2024.11)*
+### **2. ObjectBlend: 데이터 불균형 해결 데이터 증강 기법** *(2024.07 ~ 2024.11 / 5개월)*
 
 - **기술 스택:** Python, OpenCV, PyTorch, YOLO, NVIDIA AGX Orin, TensorRT
 - **주요 성과:**
