@@ -11,6 +11,8 @@ tags:
 pin: true
 math: true
 mermaid: true
+share: true 
+comments: true
 ---
 
 ## 데이터 소개

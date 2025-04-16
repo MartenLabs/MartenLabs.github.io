@@ -11,6 +11,8 @@ tags:
 pin: true
 math: true
 mermaid: true
+share: true 
+comments: true
 ---
 
 # RNN으로 손글씨 이미지 분류
