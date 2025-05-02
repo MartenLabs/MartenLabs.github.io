@@ -8,6 +8,12 @@ order: 1
 ## 📌 **개요**
 경량 AI 모델 설계와 백엔드 시스템 개발 역량을 보유했습니다. 저해상도 열화상 카메라용 경량 객체 탐지 모델을 개발하여 저사양 디바이스(STM32, Raspberry Pi)에서 실시간 추론을 구현했습니다. SCIE급 논문과 특허를 출원했으며, Spring Boot, Flask 기반 REST API 백엔드 개발과 클라우드 인프라 운영 경험을 바탕으로 AI 시스템의 전체 파이프라인 구축 능력을 갖추었습니다.
 
+
+>ORCID: https://orcid.org/0009-0004-0998-6643
+
+<br/>
+<br/>
+
 ## 📌 **주요 경력 및 프로젝트**
 
 ### 1. **한국인물검증 (2021.12 ~ 2022.12 / 1년)**
@@ -24,7 +30,8 @@ order: 1
   - 데이터 자동 수집 및 API 최적화를 통해 시스템 응답 속도 **3배** 향상
   - AWS 비용 최적화 전략을 적용하여 서버 운영 비용 30% 절감
 
----
+<br/>
+<br/>
 
 ## 📌 **연구 및 기술 성과**
 
@@ -44,21 +51,32 @@ order: 1
   - 기존 데이터 증강 기법(CutMix 등) 대비 성능 우수성 입증
   - 소수 클래스(결함) 탐지 성능 대폭 개선
 
----
+
+
+<br/>
+<br/>
 
 ## 📌 **논문 및 특허**
 
-- **SCIE 논문 (IEEE Access)** *(Under Review)*
-  - 📝 Real-Time Object Detection Using Low-Resolution Thermal Camera
-  - 📝 ObjectBlend: Data Augmentation Technique for Vision Inspection Systems
+- **SCIE 논문 (IEEE Access)** 
+  - 📝 Real-Time Object Detection Using Low-Resolution Thermal Camera  <br/>  *(DOI: 10.1109/ACCESS.2025.3566635)*
+- 
+  - 📝 ObjectBlend: Data Augmentation Technique for Vision Inspection Systems <br/> *(Under Review)*
+
+<br/>
 
 - **국제 컨퍼런스 논문 발표(IEEE ICCE 2025)**
   - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera*
   - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems*
 
+<br/>
+
 - **특허 출원**
   - 저해상도 열화상 경량 객체 탐지 모델 및 실시간 추론 특허 (10-2024-0127351)
   - 저해상도 열화상 이미지 데이터 증강 알고리즘 특허 (10-2024-0127352)
+
+<br/>
+<br/>
 
 ## 📌 **기술 역량**
 
