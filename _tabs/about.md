@@ -8,19 +8,7 @@ order: 1
 ## 📌 **개요**
 경량 AI 모델 설계와 백엔드 시스템 개발 역량을 보유했습니다. 저해상도 열화상 카메라용 경량 객체 탐지 모델을 개발하여 저사양 디바이스(STM32, Raspberry Pi)에서 실시간 추론을 구현했습니다. SCIE급 논문과 특허를 출원했으며, Spring Boot, Flask 기반 REST API 백엔드 개발과 클라우드 인프라 운영 경험을 바탕으로 AI 시스템의 전체 파이프라인 구축 능력을 갖추었습니다.
 
-<a
-id="cy-effective-orcid-url"
-class="underline"
- href="https://orcid.org/0009-0004-0998-6643"
- target="orcid.widget"
- rel="me noopener noreferrer"
- style="vertical-align: top">
- <img
-    src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-    style="width: 1em; margin-inline-start: 0.5em"
-    alt="ORCID iD icon"/>
-  https://orcid.org/0009-0004-0998-6643
-</a>
+> [OCRID](https://orcid.org/0009-0004-0998-6643) : 0009-0004-0998-6643
 
 <br/>
 <br/>
