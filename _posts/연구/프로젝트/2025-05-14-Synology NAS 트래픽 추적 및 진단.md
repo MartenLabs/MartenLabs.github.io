@@ -1,7 +1,7 @@
 ---
 title: 서버 내부 트래픽 추적 및 진단
 date: 2025-05-14T9:00:00+09:00
-categories: []
+categories: [연구, 프로젝트]
 tags:
   [
     서버, 네트워크, 트래픽, 추적, 진단, NAS, Synology NAS
