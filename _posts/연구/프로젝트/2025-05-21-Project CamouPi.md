@@ -1,5 +1,5 @@
 ---
-title: VPN 기반 보안 중심 개인 서버 구축 (Project CamouPi)
+title: Project CamouPi:A Self-Sovereign Stealth VPN & Threat Intelligence Node
 date: 2025-05-21T9:00:00+09:00
 categories: [연구, 프로젝트]
 tags:
@@ -14,8 +14,10 @@ share: true
 comments: true
 ---
 
+## Project CamouPi – Embedded. Encrypted. Intelligent.  
+*A self-sovereign stealth VPN & threat intelligence node.*
 
-### VPN 기반 보안 중심 개인 서버 구축
+---
 
 **CamouPi**는 Raspberry Pi 4B(8GB) 기반의 개인 서버 프로젝트로 **WireGuard VPN**을 통해 외부 접근을 통제하고 내부 NAS 기능 및 보안 기능을 안전하게 운영할 수 있도록 설계되었다.
 
