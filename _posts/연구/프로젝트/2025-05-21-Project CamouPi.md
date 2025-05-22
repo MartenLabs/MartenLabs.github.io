@@ -31,7 +31,7 @@ comments: true
     
 -  **실시간 온도 모니터링 및 방열 설계**
     
--  **트래픽 패턴 기반 AI 보안 모델 개발 (LSTM + DQN)**
+-  **트래픽 패턴 기반 AI 보안 모델 개발 (LSTM + DQN)  [apply [OFA](https://arxiv.org/abs/1908.09791#)]**
     
 -  **watchdog 자동 복구 시스템 설계**
 
@@ -64,7 +64,7 @@ comments: true
                 - 민감한 키, 인증 파일, 시드 securely 저장
         
             🤖 강화학습 보안 모듈
-                - LSTM + DQN 기반 트래픽 패턴 임베딩
+                - LSTM + DQN 기반 트래픽 패턴 임베딩 (OFA 도입)
                 - scapy 패킷 단위 시계열 흐름 추출
                 - 강화학습 정책	DQN/DDPG/TD3 등으로 행위 결정
                 - pihole-FTL.db 활용 쿼리 패턴 학습
