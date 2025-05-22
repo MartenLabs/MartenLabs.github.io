@@ -14,8 +14,10 @@ share: true
 comments: true
 ---
 
-## Project CamouPi – Embedded. Encrypted. Intelligent.  
-*A self-sovereign stealth VPN & threat intelligence node.*
+<!-- ## Project CamouPi – Embedded. Encrypted. Intelligent.   -->
+<!-- *A self-sovereign stealth VPN & threat intelligence node.* -->
+
+*CamouPi – Embedded. Encrypted. Intelligent.*
 
 ---
 
