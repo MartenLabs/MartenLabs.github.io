@@ -31,7 +31,7 @@ comments: true
     
 -  **실시간 온도 모니터링 및 방열 설계**
     
--  **트래픽 패턴 기반 AI 보안 모델 개발 (LSTM + DQN)  [apply [OFA](https://arxiv.org/abs/1908.09791#)]**
+-  **트래픽 패턴 기반 AI 보안 모델 개발 (LSTM + DQN)  [apply [OFA²](https://arxiv.org/abs/2303.13683)]**
     
 -  **watchdog 자동 복구 시스템 설계**
 
