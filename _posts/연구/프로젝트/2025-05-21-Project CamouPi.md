@@ -55,7 +55,6 @@ comments: true
             🔐 VPN: WireGuard Server 
             🌐 DNS: Pi-hole (DNS Filtering, Logging)
                 - Upstream DNS: Cloudflare
-                - Logging Mode: Full 
                 - Blocking List: StevenBlack + Customizable
 
             🔒 LUKS 암호화
