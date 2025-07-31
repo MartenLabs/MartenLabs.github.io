@@ -58,15 +58,15 @@ order: 1
 ## 📌 **논문 및 특허**
 
 - **IEEE Access(SCIE) 저널 게재** 
-  - 📝 Real-time object detection using low-resolution thermal camera for smart ventilation systems  <br/> *[DOI: 10.1109/ACCESS.2025.3566635](https://ieeexplore.ieee.org/document/10982063)*
+  - 📝 Real-time object detection using low-resolution thermal camera for smart ventilation systems  <br/> (1저자)*[DOI: 10.1109/ACCESS.2025.3566635](https://ieeexplore.ieee.org/document/10982063)*
 
-  - 📝 ObjectBlend: Data Augmentation Technique for Vision Inspection Systems <br/> *(Under Review)*
+  - 📝 ObjectBlend: Data Augmentation Technique for Vision Inspection Systems <br/> *(1저자, Under Review)*
 
 <br/>
 
 - **국제 학술 학회 발표(IEEE ICCE 2025)**
-  - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera*
-  - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems*
+  - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera* (1저자)
+  - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems* (1저자)
 
 <br/>
 
