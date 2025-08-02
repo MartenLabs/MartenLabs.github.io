@@ -65,8 +65,11 @@ order: 1
 <br/>
 
 - **국제 학술 학회 발표(IEEE ICCE 2025)**
-  - 📝 *Real-Time Object Detection Using Low-Resolution Thermal Camera* (1저자)
-  - 📝 *ObjectBlend Data Augmentation Technique for Vision Inspection Systems* (1저자)
+  - 📝 Real-Time Object Detection Using Low-Resolution Thermal Camera
+  <br/> (1저자)*[DOI: 10.1109/icce63647.2025.10930159](https://ieeexplore.ieee.org/document/10930159)*
+  
+  - 📝 ObjectBlend Data Augmentation Technique for Vision Inspection Systems
+  <br/> (1저자)*[DOI: 10.1109/icce63647.2025.10929866](https://ieeexplore.ieee.org/document/10929866)*
 
 <br/>
 
