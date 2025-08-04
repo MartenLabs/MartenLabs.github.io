@@ -76,9 +76,9 @@ order: 1
 
 - **IEEE ICCE 2025 (국제 컨퍼런스) · 1저자 발표**
 
-  - *Real-Time Object Detection Using Low-Resolution Thermal Camera* <br/>
+  - *Real-Time Object Detection Using Low-Resolution Thermal Camera for Smart Ventilation Systems* <br/>
     [DOI: 10.1109/icce63647.2025.10930159](https://ieeexplore.ieee.org/document/10930159)
-    
+
   - *ObjectBlend: Data Augmentation Technique for Vision Inspection Systems* <br/>
     [DOI: 10.1109/icce63647.2025.10929866](https://ieeexplore.ieee.org/document/10929866)
 
