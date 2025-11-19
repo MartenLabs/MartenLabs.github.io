@@ -53,14 +53,61 @@ order: 1
     - Peripheral 테스트 및 주행거리 관리 기능 적용  
     - Roadscope R11 **최신 장비 상용 탑재**
   
-  ##### **학습 서버 아키텍처 구축 (2025.09 ~ 진행 중)**
-  - **개요:** 검사 장비에서 수집된 데이터를 원격 GPU 서버에서 학습·관리할 수 있도록 설계한 컨테이너 기반 학습 서버
-  - **구성:** SFTP 데이터 전송 · FastAPI REST API 학습 제어 · SSE 로그/상태 스트리밍 · Prometheus+Grafana 모니터링
-  - **성과:**  
-    - 학습 상태 관리(Queued/Running/Completed/Failed/Interrupted) 체계 구축  
-    - **재기동 복구** 및 **실시간 로그 스트리밍** 기능 구현  
-    - 컨테이너 기반 다중 GPU 학습 환경 최적화  
-    - 드림텍 공장 **납품**
+    
+  ##### **제한된 네트워크 환경 자동 구성형 학습 서버 아키텍처 구축 (2025.09 ~ 진행 중)**
+
+  * **개요:**
+    폐쇄망·격리망 등 외부 인바운드 접속이 제한된 환경에서 **USB 1개 삽입만으로 OS 설치 → 보안 설정 → 네트워크 구성 → 서비스 기동까지 자동 수행**할 수 있는 Zero-Touch 기반 학습 서버 자동 배포·운영 시스템을 설계 및 구현.
+
+  * **구성:**
+
+    * cloud-init/autoinstall 기반 **OS 자동 설치 파이프라인**
+    * Self-Healing 로직 일부 구현(오류 감지, Retry, TPM Hash 검증 등) — *개발 진행 중*
+    * **LXC 기반 가상화 환경** + L2 Public Bridge 구성
+    * LXC 내부 **Docker Compose(FastAPI Backend + Frontend) 자동 기동**
+    * WireGuard + stunnel + Split DNS 구성
+    * FastAPI 기반 학습 제어 API & SSE 실시간 로그 스트리밍
+    * Prometheus + Grafana 모니터링 환경
+    * NVIDIA 드라이버 자동 설치 및 GPU 환경 자동 구성
+
+  * **성과:**
+  
+    * **Zero-Touch 배포:** USB 삽입만으로 OS 설치·초기 보안·네트워크·컨테이너 실행까지 자동화
+    
+    * **L2 기반 네트워크 통합 구성:**
+      * LXC 컨테이너가 물리 LAN과 동일한 L2 도메인에서 동작
+      * 상위 라우터의 DHCP/ARP 직접 처리
+      * mDNS·Broadcast 기반 서비스 탐색 정상 동작
+      * macvlan 방식의 제한(호스트–컨테이너 통신 불가) 해결
+    
+    * **Self-Healing 구성 일부 적용 (개발 진행 중):**
+      * 오류 발생 시 자동 Retry
+      * TPM Hash 검증 기반 무결성 점검
+      * Rollback 구조 설계 완료
+    
+    * **보안 운영 자동화:**
+      * WireGuard 정책 자동 등록
+      * 내부 CA 기반 TLS/stunnel 구성
+      * nftables/UFW 기반 방화벽 정책 자동 생성
+    
+    * **컨테이너 기반 서비스 격리:**
+      * Backend/Frontend를 LXC 내부 Docker Compose로 분리
+      * 호스트 환경 오염 방지 및 유지보수성 향상
+  
+    * **운영 안정성 및 편의성 향상:**
+      * FastAPI 기반 학습 제어 REST API
+      * 실시간 SSE 로그 스트리밍
+      * 주요 취약점(XSS, Path Traversal, Command Injection) 제거
+  
+    * **초기화 속도 최적화:**
+      * OS 설치 약 10분 + Docker Compose 빌드 5~6분
+      * 전체 초기화 과정 **약 17분 자동 완료**
+
+    * **특허 출원 예정:**
+      * *「제한된 네트워크 환경에서의 컴퓨팅 노드 자동 배포 및 보안 운영 시스템」*
+        (주발명자, 변리사 검토 완료)
+    
+    * **드림텍 납품 대기중**
 
 
 <br/>
