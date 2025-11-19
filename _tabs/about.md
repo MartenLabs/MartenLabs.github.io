@@ -54,7 +54,7 @@ order: 1
     - Roadscope R11 **최신 장비 상용 탑재**
   
     
-  ##### **제한된 네트워크 환경 자동 구성형 학습 서버 아키텍처 구축 (2025.09 ~ 진행 중)**
+  ##### **제한된 네트워크 환경 자동 구성형 학습 서버 아키텍처 구축 (2025.09 ~ 진행 중)** **[특허 출원 진행 중]**
 
   * **개요:**
     폐쇄망·격리망 등 외부 인바운드 접속이 제한된 환경에서 **USB 1개 삽입만으로 OS 설치 → 보안 설정 → 네트워크 구성 → 서비스 기동까지 자동 수행**할 수 있는 Zero-Touch 기반 학습 서버 자동 배포·운영 시스템을 설계 및 구현.
@@ -64,7 +64,7 @@ order: 1
     * cloud-init/autoinstall 기반 **OS 자동 설치 파이프라인**
     * Self-Healing 로직 일부 구현(오류 감지, Retry, TPM Hash 검증 등) — *개발 진행 중*
     * **LXC 기반 가상화 환경** + L2 Public Bridge 구성
-    * LXC 내부 **Docker Compose(FastAPI Backend + Frontend) 자동 기동**
+    * **LXC**(시스템 컨테이너) 내 **Docker**(애플리케이션 컨테이너) ***중첩 구성(Nested Virtualization)** 을 통한 서비스 격리 및 보안성 강화
     * WireGuard + stunnel + Split DNS 구성
     * FastAPI 기반 학습 제어 API & SSE 실시간 로그 스트리밍
     * Prometheus + Grafana 모니터링 환경
