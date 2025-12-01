@@ -17,7 +17,7 @@ AI Systems Engineer with expertise in lightweight AI model development and end-t
 
 ## 📌 **Professional Experience**
 
-### 1. **Korea Person Verification (Dec 2021 ~ Dec 2022 / 1 Year)**
+### 1. **한국인물검증 (Dec 2021 ~ Dec 2022 / 1 Year)**
 
 #### **Project: Personal Information Verification System (KKAYO)**
 - **Tech Stack:** Spring Boot, Flask, AWS, Swagger, Jenkins
