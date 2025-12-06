@@ -48,7 +48,7 @@ I optimize AI models for edge devices and design system architectures for real-w
 
 ---
 
-### **Korea Personnel Verification** — Backend Developer *(Dec 2021 ~ Dec 2022)*
+### **한국 인물 검증** — Backend Developer *(Dec 2021 ~ Dec 2022)*
 
 **Tech Stack:** Spring Boot, Flask, AWS, Swagger, Jenkins
 
