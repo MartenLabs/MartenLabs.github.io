@@ -30,13 +30,13 @@ I optimize AI models for edge devices and design system architectures for real-w
 
 #### Key Projects
 
-**🔹 Mobile-Conn Gateway Application** — *Deployed on Roadscope R11*
+##### **Mobile-Conn Gateway Application** — *Deployed on Roadscope R11*
 - Built a C++ gateway exposing internal system state via HTTP(S) REST API
 - Implemented ZeroMQ IPC, cpp-httplib REST server, and HTTPS certificate security
 - Delivered APIs for camera/ADAS/sensor configuration, firmware management, and device provisioning
 - **Successfully deployed in production**
 
-**🔹 Zero-Touch Server Architecture for Restricted Networks** — *[Patent Pending: 1st Inventor]*
+##### **Zero-Touch Server Architecture for Restricted Networks** — *[Patent Pending: 1st Inventor]*
 - Designed an automated deployment system: **USB insert → full service ready in ~17 minutes**
 - Key technologies:
   - **cloud-init + autoinstall** for zero-touch OS and GPU setup
@@ -44,11 +44,12 @@ I optimize AI models for edge devices and design system architectures for real-w
   - **L2 network integration** with direct DHCP/ARP and mDNS support
   - **WireGuard/Firewall** auto-configuration and TPM-based integrity checks
 - Built offline package pipelines for air-gapped environments
-- **Pending delivery to Dreamtech**
+- **Engineered for manufacturing deployment (Dreamtech environment)**
 
 ---
 
-### **한국인물검증(Korea Personnel Verification Company)** — Backend Developer *(Dec 2021 ~ Dec 2022)*
+### **한국인물검증(Korea Personnel Verification Company)
+** — Backend Developer *(Dec 2021 ~ Dec 2022)*
 
 **Tech Stack:** Spring Boot, Flask, AWS, Swagger, Jenkins
 
